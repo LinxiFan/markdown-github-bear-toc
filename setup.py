@@ -19,5 +19,10 @@ setup(
     keywords='markdown md github bear table of contents toc',
     packages=['markdowntoc'],
     install_requires=['python-dateutil'],
-    scripts=['bin/markdown-toc']
+    entry_points={
+        'console_scripts': [
+            'beartoc=markdowntoc.markdowntoc:main',
+            'mdtoc=markdowntoc.markdowntoc:main',
+        ]
+    }
 )
