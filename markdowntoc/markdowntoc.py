@@ -25,14 +25,14 @@ parser.add_argument('name', nargs='+', type=str,
 parser.add_argument('-h', '--header-priority', type=int, dest='header_priority', default=3,
                     help='(Default: 3) Maximum Header Priority/Strength to consider as Table of Contents')
 
-parser.add_argument('-t', '--type', type=str.lower, dest='type', choices=['github', 'bear'], default='github',
+parser.add_argument('-t', '--type', type=str.lower, dest='type', choices=['github', 'bear'], default='bear',
                     help='(Default: github) Github Anchors or Bear Anchors')
 
-parser.add_argument('--no-write', dest='write', action='store_false',
+parser.add_argument('-n', '--no-write', dest='write', action='store_false',
                     help='Whether or not write Table of Contents to file or note automatically or output to the console.\
                           Add this flag to TURN OFF the automatic writing.')
 
-parser.add_argument('-toc', '--table-of-contents-style', dest='toc', default='# Table of Contents',
+parser.add_argument('-toc', '--table-of-contents-style', dest='toc', default='## Table of Contents',
                     help='(Default: \'# Table of Contents\') Table of Contents Style')
 
 parser.set_defaults(write=True)
